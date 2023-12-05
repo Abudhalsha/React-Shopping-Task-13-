@@ -1,0 +1,33 @@
+{
+  "name": "shopping-basket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd reactjs && npm run build",
+    "install-reactjs": "cd reactjs && npm install",
+    "server": "nodemon --watch nodejs --exec babel-node nodejs/server.js",
+    "client": "cd reactjs && npm start",
+    "start": "concurrently  \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm run install-reactjs && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samirazazy/shopping-cart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samirazazy/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/samirazazy/shopping-cart#readme",
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
